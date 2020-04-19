@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SmartGauge
 
 class ViewController: UIViewController {
 
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         setupGaugeView()
     }
-
+    
     private func setupGaugeView() {
         gaugeView.numberOfMajorTicks = 10
         gaugeView.numberOfMinorTicks = 3

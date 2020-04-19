@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="ipad12_9" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -16,19 +16,27 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4B-xy-XTK" customClass="SmartGauge" customModule="Pods_SmartGauge_Example">
-                                <rect key="frame" x="383" y="212" width="600" height="600"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4B-xy-XTK" customClass="SmartGauge" customModule="SmartGauge">
+                                <rect key="frame" x="256" y="37.666666666666657" width="300" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="600" id="YLr-sP-ggP"/>
-                                    <constraint firstAttribute="width" constant="600" id="pOv-UT-qhQ"/>
+                                    <constraint firstAttribute="height" constant="600" id="YLr-sP-ggP">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="300"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="600" id="pOv-UT-qhQ">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="300"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ph3-pQ-MwN">
-                                <rect key="frame" x="381" y="837" width="604" height="31"/>
+                                <rect key="frame" x="254" y="342.66666666666669" width="304" height="31"/>
                                 <connections>
                                     <action selector="sliderValueChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="h7o-dK-x2z"/>
                                 </connections>
@@ -37,7 +45,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ph3-pQ-MwN" firstAttribute="leading" secondItem="N4B-xy-XTK" secondAttribute="leading" id="6KL-k0-qqB"/>
-                            <constraint firstItem="Ph3-pQ-MwN" firstAttribute="top" secondItem="N4B-xy-XTK" secondAttribute="bottom" constant="25" id="OBK-ef-ofp"/>
+                            <constraint firstItem="Ph3-pQ-MwN" firstAttribute="top" secondItem="N4B-xy-XTK" secondAttribute="bottom" constant="25" id="OBK-ef-ofp">
+                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                            </constraint>
                             <constraint firstItem="N4B-xy-XTK" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="ffy-l1-HQd"/>
                             <constraint firstItem="N4B-xy-XTK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hHV-J0-o7F"/>
                             <constraint firstItem="Ph3-pQ-MwN" firstAttribute="trailing" secondItem="N4B-xy-XTK" secondAttribute="trailing" id="kcw-gY-AzY"/>
