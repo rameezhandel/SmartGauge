@@ -11,6 +11,18 @@ import UIKit
 
 class SGGaugeValueLayer: SGBaseLayer {
     
+    var decimalPlaces: Int = 2 {
+        didSet { updateUI() }
+    }
+
+    public var valueFontSize: CGFloat? {
+        didSet { updateUI() }
+    }
+
+    public var valueTextColor: UIColor = UIColor.black {
+        didSet { updateUI() }
+    }
+
     private var textLayer: CATextLayer?
     
     //MARK: Functions
@@ -25,14 +37,14 @@ class SGGaugeValueLayer: SGBaseLayer {
         
         let radius = min(bounds.midX, bounds.midY) - 8.0
         
-        let value = Int(gaugeValue ?? 0.0)
+        let value = (gaugeValue ?? 0.0).rounded(2)
 
         textLayer = CATextLayer()
         textLayer?.font = CTFontCreateUIFontForLanguage(.system, radius/30.0, nil)
-        textLayer?.fontSize = radius/3.0
+        textLayer?.fontSize = valueFontSize ?? radius/3.0
         textLayer?.contentsScale = contentsScale
-        textLayer?.foregroundColor = UIColor.black.cgColor
-        textLayer?.string = "\(value)" // \(Int(CGFloat(value) / gaugeValuesScale + gaugeValuesOffset))"
+        textLayer?.foregroundColor = valueTextColor.cgColor
+        textLayer?.string = "\(value)"
 
         let size = textLayer?.preferredFrameSize() ?? CGSize.zero
         let yVal =  bounds.height - size.height - radius / 4
@@ -61,4 +73,11 @@ extension String {
         return size.height
     }
 
+}
+
+extension CGFloat {
+    func rounded(_ places:Int) -> CGFloat {
+        let divisor = pow(10.0, CGFloat(places))
+        return (self * divisor).rounded() / divisor
+    }
 }

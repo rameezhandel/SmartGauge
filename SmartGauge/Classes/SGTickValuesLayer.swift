@@ -11,6 +11,14 @@ import UIKit
 
 class SGTickValuesLayer: SGBaseLayer {
     
+    var coveredTickValueColor: UIColor = UIColor.black {
+        didSet { updateUI() }
+    }
+
+    var uncoveredTickValueColor: UIColor = UIColor.lightGray {
+        didSet { updateUI() }
+    }
+
     private var rangesLayers: [CALayer]?
 
     //MARK: Functions
@@ -42,7 +50,7 @@ class SGTickValuesLayer: SGBaseLayer {
             layer.font = CTFontCreateUIFontForLanguage(.system, radius/30.0, nil)
             layer.fontSize = radius/10.0
             layer.contentsScale = contentsScale
-            layer.foregroundColor = (gaugeValue ?? 0) > CGFloat(value) ? UIColor.black.cgColor : UIColor.lightGray.cgColor
+            layer.foregroundColor = (gaugeValue ?? 0) >= CGFloat(value) ? coveredTickValueColor.cgColor : uncoveredTickValueColor.cgColor
             layer.frame = bounds.insetBy(dx: +radius/3.5, dy: +radius/3.5)
             layer.string = "\(value)" // \(Int(CGFloat(value) / gaugeValuesScale + gaugeValuesOffset))"
             layer.alignmentMode = CATextLayerAlignmentMode.center

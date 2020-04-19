@@ -16,6 +16,10 @@ class SGTickLayer: SGBaseLayer {
         didSet { updateUI() }
     }
 
+    public var tickColor: UIColor = UIColor.lightGray {
+        didSet { updateUI() }
+    }
+
     //MARK: Private Properties
     private var tickRangesLayers: [CALayer]?
 
@@ -86,7 +90,7 @@ class SGTickLayer: SGBaseLayer {
 
         let tickShapeLayer = CAShapeLayer()
         tickShapeLayer.setAffineTransform(CGAffineTransform(translationX: center.x, y: center.y))
-        tickShapeLayer.strokeColor = UIColor.lightGray.cgColor
+        tickShapeLayer.strokeColor = tickColor.cgColor
         tickShapeLayer.path = tickScalesPath
         tickShapeLayer.lineWidth = 2.0
         addSublayer(tickShapeLayer)

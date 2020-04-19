@@ -19,6 +19,34 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
 
+    public var tickColor: UIColor = UIColor.lightGray {
+        didSet { updateUI() }
+    }
+    
+    public var coveredTickValueColor: UIColor = UIColor.black {
+        didSet { updateUI() }
+    }
+
+    public var uncoveredTickValueColor: UIColor = UIColor.lightGray {
+        didSet { updateUI() }
+    }
+
+    public var decimalPlaces: Int = 2 {
+        didSet { updateUI() }
+    }
+
+    public var valueFontSize: CGFloat? {
+        didSet { updateUI() }
+    }
+
+    public var valueTextColor: UIColor = UIColor.black {
+        didSet { updateUI() }
+    }
+
+    public var valueFont: UIFont = UIFont.systemFont(ofSize: 20) {
+        didSet { updateUI() }
+    }
+
     public var gaugeValue: CGFloat? {
         didSet { updateUI() }
     }
@@ -40,7 +68,7 @@ public class SmartGauge: UIView {
     }
 
     public var rangesList: [SGRanges] = [] {
-        didSet {  }
+        didSet { updateUI() }
     }
 
     //MARK: Private Properties
@@ -53,11 +81,13 @@ public class SmartGauge: UIView {
     //MARK: Functions
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .clear
         updateUI()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        backgroundColor = .clear
         updateUI()
     }
 
@@ -96,6 +126,7 @@ public class SmartGauge: UIView {
         tickLayer?.gaugeMaxValue = gaugeMaxValue
         tickLayer?.numberOfMajorTicks = numberOfMajorTicks
         tickLayer?.numberOfMinorTicks = numberOfMinorTicks
+        tickLayer?.tickColor = tickColor
         tickLayer.map { layer.addSublayer($0) }
     }
 
@@ -107,6 +138,8 @@ public class SmartGauge: UIView {
         tickValuesLayer?.gaugeValue = gaugeValue
         tickValuesLayer?.gaugeMaxValue = gaugeMaxValue
         tickValuesLayer?.numberOfMajorTicks = numberOfMajorTicks
+        tickValuesLayer?.coveredTickValueColor = coveredTickValueColor
+        tickValuesLayer?.uncoveredTickValueColor = uncoveredTickValueColor
         tickValuesLayer.map { layer.addSublayer($0) }
     }
 
@@ -118,6 +151,9 @@ public class SmartGauge: UIView {
         selectedValueLayer?.gaugeValue = gaugeValue
         selectedValueLayer?.gaugeMaxValue = gaugeMaxValue
         selectedValueLayer?.numberOfMajorTicks = numberOfMajorTicks
+        selectedValueLayer?.decimalPlaces = decimalPlaces
+        selectedValueLayer?.valueTextColor = valueTextColor
+        selectedValueLayer?.valueFontSize = valueFontSize
         selectedValueLayer.map { layer.addSublayer($0) }
     }
 
