@@ -1,0 +1,6 @@
+framework module SmartGauge {
+  umbrella header "SmartGauge-umbrella.h"
+
+  export *
+  module * { export * }
+}
