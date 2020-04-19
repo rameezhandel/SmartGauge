@@ -17,28 +17,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         setupGaugeView()
+        setupSlider()
     }
     
     private func setupGaugeView() {
         gaugeView.numberOfMajorTicks = 10
         gaugeView.numberOfMinorTicks = 3
         
-        
         let first = SGRanges("first", fromValue: 0, toValue: 20, color: .blue)
         let second = SGRanges("second", fromValue: 20, toValue: 40, color: .green)
-        let third = SGRanges("third", fromValue: 40, toValue: 80, color: .red)
+        let third = SGRanges("third", fromValue: 0, toValue: 80, color: .red)
 
         gaugeView.rangesList = [first, second, third]
         gaugeView.gaugeMaxValue = third.toValue
         gaugeView.gaugeAngle = 60
+        gaugeView.gaugeValue = 0
         gaugeView.gaugeTrackColor = UIColor.blue
-        gaugeView.gaugeValue = 20
-
+    }
+    
+    private func setupSlider() {
         //Slider Setup
         slider.maximumValue = Float(gaugeView.gaugeMaxValue)
         slider.minimumValue = Float(0)

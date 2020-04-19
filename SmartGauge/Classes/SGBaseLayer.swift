@@ -44,3 +44,10 @@ class SGBaseLayer: CALayer {
     }
 
 }
+
+extension CGFloat {
+    func rounded(_ places:Int) -> CGFloat {
+        let divisor = pow(10.0, CGFloat(places))
+        return (self * divisor).rounded() / divisor
+    }
+}

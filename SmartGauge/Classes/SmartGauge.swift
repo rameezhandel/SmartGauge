@@ -59,7 +59,7 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
 
-    public var gaugeAngle: CGFloat = 45.0 {
+    public var gaugeAngle: CGFloat = 60.0 {
         didSet { updateUI() }
     }
     

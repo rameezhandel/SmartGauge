@@ -38,13 +38,17 @@ class SGGaugeValueLayer: SGBaseLayer {
         let radius = min(bounds.midX, bounds.midY) - 8.0
         
         let value = (gaugeValue ?? 0.0).rounded(2)
+        var displayVal = "\(value)"
+        if floor(value) == value {
+            displayVal = "\(Int(value))"
+        }
 
         textLayer = CATextLayer()
         textLayer?.font = CTFontCreateUIFontForLanguage(.system, radius/30.0, nil)
         textLayer?.fontSize = valueFontSize ?? radius/3.0
         textLayer?.contentsScale = contentsScale
         textLayer?.foregroundColor = valueTextColor.cgColor
-        textLayer?.string = "\(value)"
+        textLayer?.string = displayVal
 
         let size = textLayer?.preferredFrameSize() ?? CGSize.zero
         let yVal =  bounds.height - size.height - radius / 4
@@ -73,11 +77,4 @@ extension String {
         return size.height
     }
 
-}
-
-extension CGFloat {
-    func rounded(_ places:Int) -> CGFloat {
-        let divisor = pow(10.0, CGFloat(places))
-        return (self * divisor).rounded() / divisor
-    }
 }
