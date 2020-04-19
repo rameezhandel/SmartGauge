@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SmartGauge_Example' do
+  pod 'SmartGauge', :path => '../'
+
+  target 'SmartGauge_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
