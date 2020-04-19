@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SmartGauge: UIView {
+public class SmartGauge: UIView {
     
     //MARK: Public Properties
     public var numberOfMajorTicks: Int = 5 {
@@ -58,6 +58,11 @@ class SmartGauge: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        updateUI()
+    }
+
+    override public func layoutSubviews() {
+        super.layoutSubviews()
         updateUI()
     }
 
@@ -132,12 +137,12 @@ class SmartGauge: UIView {
 
 
 public class SGRanges {
-    var title: String?
-    var fromValue: CGFloat = 0.0
-    var toValue: CGFloat = 0.0
-    var color: UIColor?
+    public var title: String?
+    public var fromValue: CGFloat = 0.0
+    public var toValue: CGFloat = 0.0
+    public var color: UIColor?
     
-    init(_ title: String?, fromValue: CGFloat, toValue: CGFloat,  color: UIColor?) {
+    public init(_ title: String?, fromValue: CGFloat, toValue: CGFloat,  color: UIColor?) {
         self.title = title
         self.fromValue = fromValue
         self.toValue = toValue
