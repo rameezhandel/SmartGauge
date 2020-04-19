@@ -53,11 +53,11 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3A3C6AD3CE46F1B5E571CE5874B80DE2 /* SmartGauge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartGauge-dummy.m"; sourceTree = "<group>"; };
 		4A0E57EDBC68D45AB90A7CF3616BDFD6 /* SmartGauge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartGauge.swift; path = SmartGauge/Classes/SmartGauge.swift; sourceTree = "<group>"; };
-		4BEB4E29A48DFDAFDEEA7B60963286D2 /* Pods_SmartGauge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SmartGauge_Example.framework; path = "Pods-SmartGauge_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BEB4E29A48DFDAFDEEA7B60963286D2 /* Pods_SmartGauge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartGauge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D1584AE719C1922EB2E3541B26D158 /* Pods-SmartGauge_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartGauge_Example-dummy.m"; sourceTree = "<group>"; };
 		54EFA90DF457F4983BFC7AD38C61A4B9 /* Pods-SmartGauge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartGauge_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5B1E8EE864C8D1D9269EDD5E09ECCF62 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		6D6897A37687988D95D5879E6D3F70C1 /* SmartGauge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmartGauge.framework; path = SmartGauge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1E8EE864C8D1D9269EDD5E09ECCF62 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6D6897A37687988D95D5879E6D3F70C1 /* SmartGauge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartGauge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFC4CFD1689D329E25C0272F03B05FF /* Pods-SmartGauge_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartGauge_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73DC0851114DFA17FDA586894DBF59E8 /* Pods-SmartGauge_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartGauge_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7A25835ED10024BB1BBC36DE9D4CFB45 /* SmartGauge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartGauge-prefix.pch"; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		8DB51D7880BBF5742869BA54837A9FEE /* SGHandleLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGHandleLayer.swift; path = SmartGauge/Classes/SGHandleLayer.swift; sourceTree = "<group>"; };
 		94C22AD706AB4D17D552512F25726495 /* SmartGauge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartGauge.modulemap; sourceTree = "<group>"; };
 		94EF4913136D0318740D1F06FF3597AE /* Pods-SmartGauge_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartGauge_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E5EE1C89F7953E66597B1CA05A71D35 /* Pods-SmartGauge_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartGauge_Tests.modulemap"; sourceTree = "<group>"; };
 		A5C55AE62ECC04F66870F37399799E40 /* SGBaseLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGBaseLayer.swift; path = SmartGauge/Classes/SGBaseLayer.swift; sourceTree = "<group>"; };
 		A787A62494E390800A7B126F530F9F36 /* Pods-SmartGauge_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartGauge_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -77,9 +77,9 @@
 		C14AC604E8A6310DB3E7835564EB94FA /* Pods-SmartGauge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartGauge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C38BF3977FC8DAA799D202A207BBD45D /* SGTickValuesLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGTickValuesLayer.swift; path = SmartGauge/Classes/SGTickValuesLayer.swift; sourceTree = "<group>"; };
 		D17FC1919D29A2AC7040664220EB7E8D /* Pods-SmartGauge_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartGauge_Tests-Info.plist"; sourceTree = "<group>"; };
-		E260A662813780B9BD6F29A12CA7FDFA /* Pods_SmartGauge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SmartGauge_Tests.framework; path = "Pods-SmartGauge_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA150918B26BA16B223AB6A39FD7DEEA /* SmartGauge.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SmartGauge.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F755B615DB9B9A3295184CB257C1E12D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E260A662813780B9BD6F29A12CA7FDFA /* Pods_SmartGauge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartGauge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA150918B26BA16B223AB6A39FD7DEEA /* SmartGauge.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SmartGauge.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		F755B615DB9B9A3295184CB257C1E12D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F7B87F9C0A3EB61DDD4F9E0C5D44E265 /* SmartGauge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartGauge.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -642,8 +642,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
