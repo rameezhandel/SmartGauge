@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         gaugeView.gaugeAngle = 60
         gaugeView.gaugeValue = 0
         gaugeView.gaugeTrackColor = UIColor.blue
+        gaugeView.enableLegends = true
     }
     
     private func setupSlider() {

@@ -19,12 +19,12 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
 
-    public var enableLegends: Bool = false {
+    public var enableLegends: Bool = true {
         didSet { updateUI() }
     }
 
-    /// The range should be 0 to 1
-    public var gaugeViewPercentage: CGFloat = 0.7 {
+    /// The range should be 0 to 1. Applicable only if enableLegends = TRUE
+    public var gaugeViewPercentage: CGFloat = 0.75 {
         didSet { updateUI() }
     }
 
@@ -134,20 +134,28 @@ public class SmartGauge: UIView {
     }
     
     private func rangesUpdated() {
+        
+        // Create legends only if lenegds enabled
+        guard enableLegends else { return }
         setupLegends()
     }
     
     private func setupBaseLayers() {
-        // Setup Gauge Holder Layer
+        
         gaugeHolderLayer.removeFromSuperlayer()
-        let gaugeHeight = layer.bounds.height * gaugeViewPercentage
+        legendsHolderLayer.removeFromSuperlayer()
+
+        // Setup Gauge Holder Layer
+        let multiplier = enableLegends ? gaugeViewPercentage : 1
+        let gaugeHeight = layer.bounds.height * multiplier
         let gaugeYVal = (layer.bounds.height - gaugeHeight) / 2
-        let gaugeHolderFrame = CGRect(x: 0, y: gaugeYVal, width: layer.bounds.width * gaugeViewPercentage, height: gaugeHeight)
+        let gaugeHolderFrame = CGRect(x: 0, y: gaugeYVal, width: layer.bounds.width * multiplier, height: gaugeHeight)
         gaugeHolderLayer.frame = gaugeHolderFrame
         layer.addSublayer(gaugeHolderLayer)
         
+        // Create legends only if lenegds enabled
+        guard enableLegends else { return }
         // Setup Legends holder Layer
-        legendsHolderLayer.removeFromSuperlayer()
         let xVal = gaugeHolderFrame.width
         let width = layer.bounds.width - gaugeHolderFrame.width
         let legendsHolderFrame = CGRect(x: xVal, y: 0, width: width, height: layer.bounds.height)
