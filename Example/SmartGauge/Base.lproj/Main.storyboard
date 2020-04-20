@@ -42,7 +42,7 @@
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ph3-pQ-MwN" firstAttribute="leading" secondItem="N4B-xy-XTK" secondAttribute="leading" id="6KL-k0-qqB"/>
                             <constraint firstItem="Ph3-pQ-MwN" firstAttribute="top" secondItem="N4B-xy-XTK" secondAttribute="bottom" constant="25" id="OBK-ef-ofp">

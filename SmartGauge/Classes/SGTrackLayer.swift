@@ -16,6 +16,11 @@ class SGTrackLayer: SGBaseLayer {
         didSet { setupTrack() }
     }
     
+    public var trackBackgroundColor: UIColor = UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 0.6) {
+        didSet { setupTrack() }
+    }
+
+    
     var gaugeRadioScale: CGFloat = 0.95 {
         didSet { setupTrack() }
     }
@@ -47,7 +52,7 @@ class SGTrackLayer: SGBaseLayer {
                 break
             }
         }
-        drawTrackLayer(trackLayer, value: gaugeMaxValue, strokeColor: trackColor.withAlphaComponent(0.1))
+        drawTrackLayer(trackLayer, value: gaugeMaxValue, strokeColor: trackBackgroundColor)
         addSublayer(trackLayer!)
         
         // Draw Track Value
