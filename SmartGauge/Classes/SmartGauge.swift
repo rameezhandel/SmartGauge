@@ -31,6 +31,10 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
 
+    public var legendVerticalSpacing: CGFloat = 10.0 {
+        didSet { updateUI() }
+    }
+
     /// The range should be 0 to 1. Applicable only if enableLegends = TRUE
     public var gaugeViewPercentage: CGFloat = 0.75 {
         didSet { updateUI() }
@@ -160,7 +164,6 @@ public class SmartGauge: UIView {
         let gaugeHolderFrame = CGRect(x: 0, y: gaugeYVal, width: layer.bounds.width * multiplier, height: gaugeHeight)
         gaugeHolderLayer.frame = gaugeHolderFrame
         layer.addSublayer(gaugeHolderLayer)
-        
         // Create legends only if lenegds enabled
         guard enableLegends else { return }
         // Setup Legends holder Layer
@@ -180,15 +183,24 @@ public class SmartGauge: UIView {
             
             legendTextLayer.string = range.title
             legendTextLayer.foregroundColor = valueTextColor.cgColor
-            let frameSize = legendTextLayer.preferredFrameSize()
-            let yValue = CGFloat(index) * frameSize.height
+            let textFrameSize = legendTextLayer.preferredFrameSize()
+            
+            var legendTextyValue = CGFloat(index) * textFrameSize.height + CGFloat(index + 1) * legendVerticalSpacing
+            var legendYValue = CGFloat(index) * legendSize.height +  CGFloat(index + 1) * legendVerticalSpacing
+
+            let remainingSpaceMultiplier = 2 * CGFloat(index) + 1
+            if textFrameSize.height > legendSize.height {
+                legendYValue += ((textFrameSize.height - legendSize.height) * remainingSpaceMultiplier / 2)
+            } else if legendSize.height > textFrameSize.height {
+                legendTextyValue += ((legendSize.height - textFrameSize.height) * remainingSpaceMultiplier  / 2)
+            }
+            
             let xValue = legendMargin + legendSpacing + legendSize.width
-            legendTextLayer.frame = CGRect(x: xValue, y: yValue, width: frameSize.width, height: frameSize.height)
+            legendTextLayer.frame = CGRect(x: xValue, y: legendTextyValue, width: textFrameSize.width, height: textFrameSize.height)
             legendsHolderLayer.addSublayer(legendTextLayer)
             
             // Create legend
             let legend = CAShapeLayer()
-            let legendYValue = yValue + ((frameSize.height - legendSize.height) / 2)
             legend.path = UIBezierPath(roundedRect: CGRect(x: legendMargin, y: legendYValue, width: legendSize.width, height: legendSize.height), cornerRadius: 5).cgPath
             legend.fillColor = range.color?.cgColor ?? UIColor.gray.cgColor
             legendsHolderLayer.addSublayer(legend)

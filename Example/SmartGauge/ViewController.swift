@@ -25,17 +25,26 @@ class ViewController: UIViewController {
         gaugeView.numberOfMajorTicks = 10
         gaugeView.numberOfMinorTicks = 3
         
-        let first = SGRanges("first", fromValue: 0, toValue: 20, color: .blue)
-        let second = SGRanges("second", fromValue: 20, toValue: 40, color: .green)
-        let third = SGRanges("third", fromValue: 0, toValue: 80, color: .red)
-
-        gaugeView.rangesList = [first, second, third]
-        gaugeView.gaugeMaxValue = third.toValue
         gaugeView.gaugeAngle = 60
         gaugeView.gaugeValue = 0
         gaugeView.gaugeTrackColor = UIColor.blue
         gaugeView.enableLegends = true
-        gaugeView.gaugeViewPercentage = 0.8
+        gaugeView.gaugeViewPercentage = 0.75
+        gaugeView.legendSize = CGSize(width: 25, height: 20)
+        if let font = CTFontCreateUIFontForLanguage(.system, 30.0, nil) {
+            gaugeView.legendFont = font
+        }
+
+        let first = SGRanges("0 - 20", fromValue: 0, toValue: 20, color: .blue)
+        let second = SGRanges("20 - 40", fromValue: 20, toValue: 40, color: .green)
+        let third = SGRanges("40 - 80", fromValue: 0, toValue: 80, color: .red)
+        let fourth = SGRanges("80 - 90", fromValue: 80, toValue: 90, color: .cyan)
+        let fifth = SGRanges("90 - 100", fromValue: 90, toValue: 100, color: .orange)
+        let sixth = SGRanges("100 - 120", fromValue: 100, toValue: 120, color: .systemPink)
+
+        gaugeView.rangesList = [first, second, third, fourth, fifth, sixth]
+        gaugeView.gaugeMaxValue = sixth.toValue
+
     }
     
     private func setupSlider() {
