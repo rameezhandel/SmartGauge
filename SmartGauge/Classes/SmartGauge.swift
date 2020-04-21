@@ -23,6 +23,14 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
 
+    public var legendMargin: CGFloat = 15.0 {
+        didSet { updateUI() }
+    }
+
+    public var legendSpacing: CGFloat = 10.0 {
+        didSet { updateUI() }
+    }
+
     /// The range should be 0 to 1. Applicable only if enableLegends = TRUE
     public var gaugeViewPercentage: CGFloat = 0.75 {
         didSet { updateUI() }
@@ -164,7 +172,6 @@ public class SmartGauge: UIView {
     }
     
     private func setupLegends() {
-        let margin: CGFloat = 5.0
         for (index, range) in rangesList.enumerated() {
             // TextLayer
             let legendTextLayer = CATextLayer()
@@ -175,14 +182,14 @@ public class SmartGauge: UIView {
             legendTextLayer.foregroundColor = valueTextColor.cgColor
             let frameSize = legendTextLayer.preferredFrameSize()
             let yValue = CGFloat(index) * frameSize.height
-            let xValue = (margin * 2) + legendSize.width
+            let xValue = legendMargin + legendSpacing + legendSize.width
             legendTextLayer.frame = CGRect(x: xValue, y: yValue, width: frameSize.width, height: frameSize.height)
             legendsHolderLayer.addSublayer(legendTextLayer)
             
             // Create legend
             let legend = CAShapeLayer()
             let legendYValue = yValue + ((frameSize.height - legendSize.height) / 2)
-            legend.path = UIBezierPath(roundedRect: CGRect(x: margin, y: legendYValue, width: legendSize.width, height: legendSize.height), cornerRadius: 5).cgPath
+            legend.path = UIBezierPath(roundedRect: CGRect(x: legendMargin, y: legendYValue, width: legendSize.width, height: legendSize.height), cornerRadius: 5).cgPath
             legend.fillColor = range.color?.cgColor ?? UIColor.gray.cgColor
             legendsHolderLayer.addSublayer(legend)
         }
