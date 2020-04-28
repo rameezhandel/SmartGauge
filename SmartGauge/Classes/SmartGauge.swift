@@ -35,6 +35,10 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
 
+    public var enableRangeColorIndicator: Bool = true {
+        didSet { updateUI() }
+    }
+
     /// The range should be 0 to 1. Applicable only if enableLegends = TRUE
     public var gaugeViewPercentage: CGFloat = 0.75 {
         didSet { updateUI() }
@@ -218,6 +222,7 @@ public class SmartGauge: UIView {
         trackLayer?.rangesList = rangesList
         trackLayer?.gaugeTrackColor = gaugeTrackColor
         trackLayer?.trackBackgroundColor = trackBackgroundColor
+        trackLayer?.enableRangeColorIndicator = enableRangeColorIndicator
         trackLayer.map { gaugeHolderLayer.addSublayer($0) }
     }
     

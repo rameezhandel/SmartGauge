@@ -20,6 +20,9 @@ class SGTrackLayer: SGBaseLayer {
         didSet { setupTrack() }
     }
 
+    public var enableRangeColorIndicator: Bool = true {
+        didSet { setupTrack() }
+    }
     
     var gaugeRadioScale: CGFloat = 0.95 {
         didSet { setupTrack() }
@@ -32,6 +35,7 @@ class SGTrackLayer: SGBaseLayer {
     //MARK: Private properties
     private var trackLayer: CAShapeLayer?
     private var trackValueLayer: CAShapeLayer?
+    private var rangeColorLayers: [CAShapeLayer] = []
 
     //MARK: Functions
     override func updateUI() {
@@ -42,9 +46,13 @@ class SGTrackLayer: SGBaseLayer {
     private func setupTrack() {
         trackLayer?.removeFromSuperlayer()
         trackValueLayer?.removeFromSuperlayer()
+        for rangeColorLayer in rangeColorLayers {
+            rangeColorLayer.removeFromSuperlayer()
+        }
+        rangeColorLayers.removeAll()
 
         trackLayer = CAShapeLayer()
-        
+
         var trackColor = gaugeTrackColor
         for range in rangesList {
             if (gaugeValue ?? 0.0) <= range.toValue {
@@ -54,11 +62,16 @@ class SGTrackLayer: SGBaseLayer {
         }
         drawTrackLayer(trackLayer, value: gaugeMaxValue, strokeColor: trackBackgroundColor)
         addSublayer(trackLayer!)
-        
+
         // Draw Track Value
         trackValueLayer = CAShapeLayer()
         drawTrackLayer(trackValueLayer, value: gaugeValue ?? 0.0, strokeColor: trackColor)
         addSublayer(trackValueLayer!)
+        
+        // Draw Range Layer
+        if enableRangeColorIndicator {
+            drawRangeColorLayer()
+        }
     }
     
     private func drawTrackLayer(_ layer: CAShapeLayer?, value: CGFloat, strokeColor: UIColor) {
@@ -81,5 +94,34 @@ class SGTrackLayer: SGBaseLayer {
 
         layer?.path = path
 
+    }
+    
+    private func drawRangeColorLayer() {
+        
+        let center = CGPoint(x: bounds.midX, y: bounds.midY)
+        let radius = min(bounds.midX, bounds.midY)*CGFloat(gaugeRadioScale) - 25
+        
+        var startAngle: CGFloat = (gaugeAngle + 90.0).deg2rad()
+
+        for (_, range) in rangesList.enumerated() {
+
+            let convertedValue = angleForValue(range.toValue - range.fromValue).deg2rad()
+            let endAngle = startAngle + convertedValue
+
+            let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+            
+            let colorRangeLayer = CAShapeLayer()
+            colorRangeLayer.path = path.cgPath
+            colorRangeLayer.strokeColor = range.color?.cgColor
+            colorRangeLayer.fillColor = nil
+            colorRangeLayer.lineWidth = 5.0
+            
+            addSublayer(colorRangeLayer)
+            rangeColorLayers.append(colorRangeLayer)
+            
+            startAngle = endAngle
+            
+        }
+        
     }
 }
