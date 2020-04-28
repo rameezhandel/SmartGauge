@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmartGauge'
-  s.version          = '0.5.0'
+  s.version          = '0.5.1'
   s.summary          = 'Gauge for iOS'
 
 # This description is used to generate tags and improve search results.
