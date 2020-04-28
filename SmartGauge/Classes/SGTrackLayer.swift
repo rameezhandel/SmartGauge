@@ -99,7 +99,11 @@ class SGTrackLayer: SGBaseLayer {
     private func drawRangeColorLayer() {
         
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
-        let radius = min(bounds.midX, bounds.midY)*CGFloat(gaugeRadioScale) - 25
+        let radius = min(bounds.midX, bounds.midY)
+        
+        let ticksRadius = radius - radius/4.0 + radius/15.0
+        let trackRadius = min(bounds.midX, bounds.midY)*CGFloat(gaugeRadioScale)
+        let rangeRadius = ticksRadius + (trackRadius - gaugeLineWidth/2 - ticksRadius)/2
         
         var startAngle: CGFloat = (gaugeAngle + 90.0).deg2rad()
 
@@ -108,7 +112,7 @@ class SGTrackLayer: SGBaseLayer {
             let convertedValue = angleForValue(range.toValue - range.fromValue).deg2rad()
             let endAngle = startAngle + convertedValue
 
-            let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+            let path = UIBezierPath(arcCenter: center, radius: rangeRadius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
             
             let colorRangeLayer = CAShapeLayer()
             colorRangeLayer.path = path.cgPath
