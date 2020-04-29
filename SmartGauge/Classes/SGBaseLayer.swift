@@ -11,6 +11,10 @@ import QuartzCore
 class SGBaseLayer: CALayer {
 
     //MARK: Public Properties
+    public var gaugeType: SGType = .gauge {
+        didSet { updateUI() }
+    }
+
     var numberOfMajorTicks: Int = 5 {
         didSet { updateUI() }
     }

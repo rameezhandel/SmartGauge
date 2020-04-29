@@ -28,7 +28,11 @@ class SGTrackLayer: SGBaseLayer {
         didSet { setupTrack() }
     }
 
-    var gaugeLineWidth: CGFloat = 20.0 {
+    var gaugeValueTrackWidth: CGFloat = 20.0 {
+        didSet { setupTrack() }
+    }
+
+    var gaugeTrackWidth: CGFloat = 20.0 {
         didSet { setupTrack() }
     }
 
@@ -60,12 +64,12 @@ class SGTrackLayer: SGBaseLayer {
                 break
             }
         }
-        drawTrackLayer(trackLayer, value: gaugeMaxValue, strokeColor: trackBackgroundColor)
+        drawTrackLayer(trackLayer, value: gaugeMaxValue, trackWidth: gaugeTrackWidth, strokeColor: trackBackgroundColor)
         addSublayer(trackLayer!)
 
         // Draw Track Value
         trackValueLayer = CAShapeLayer()
-        drawTrackLayer(trackValueLayer, value: gaugeValue ?? 0.0, strokeColor: trackColor)
+        drawTrackLayer(trackValueLayer, value: gaugeValue ?? 0.0, trackWidth: gaugeValueTrackWidth, strokeColor: trackColor)
         addSublayer(trackValueLayer!)
         
         // Draw Range Layer
@@ -74,7 +78,7 @@ class SGTrackLayer: SGBaseLayer {
         }
     }
     
-    private func drawTrackLayer(_ layer: CAShapeLayer?, value: CGFloat, strokeColor: UIColor) {
+    private func drawTrackLayer(_ layer: CAShapeLayer?, value: CGFloat, trackWidth: CGFloat, strokeColor: UIColor) {
         
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let radius = min(bounds.midX, bounds.midY)*CGFloat(gaugeRadioScale)
@@ -85,7 +89,7 @@ class SGTrackLayer: SGBaseLayer {
         let convertedValue = angleForValue(value)
         let val = convertedValue.deg2rad()
 
-        layer?.lineWidth = gaugeLineWidth
+        layer?.lineWidth = trackWidth
         layer?.lineCap = .round
         layer?.strokeColor = strokeColor.cgColor
 
@@ -103,7 +107,8 @@ class SGTrackLayer: SGBaseLayer {
         
         let ticksRadius = radius - radius/4.0 + radius/15.0
         let trackRadius = min(bounds.midX, bounds.midY)*CGFloat(gaugeRadioScale)
-        let rangeRadius = ticksRadius + (trackRadius - gaugeLineWidth/2 - ticksRadius)/2
+        let trackWidth = max(gaugeTrackWidth, gaugeValueTrackWidth)
+        let rangeRadius = ticksRadius + (trackRadius - trackWidth/2 - ticksRadius)/2
         
         var startAngle: CGFloat = (gaugeAngle + 90.0).deg2rad()
 

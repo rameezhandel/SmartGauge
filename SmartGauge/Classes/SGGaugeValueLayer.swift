@@ -51,7 +51,13 @@ class SGGaugeValueLayer: SGBaseLayer {
         textLayer?.string = displayVal
 
         let size = textLayer?.preferredFrameSize() ?? CGSize.zero
-        let yVal =  bounds.height - size.height - radius / 4
+        var yVal: CGFloat =  0.0
+        if gaugeType == .gauge {
+            yVal = bounds.height - size.height - radius / 4
+        } else {
+            yVal = (bounds.height - size.height)/2
+        }
+        
         textLayer?.frame = CGRect(x: (bounds.width - size.width)/2, y: yVal, width: size.width, height: size.height)
         textLayer?.alignmentMode = CATextLayerAlignmentMode.center
         addSublayer(textLayer!)

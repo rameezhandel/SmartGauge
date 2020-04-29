@@ -8,9 +8,18 @@
 
 import UIKit
 
+public enum SGType {
+    case gauge
+    case goal
+}
+
 public class SmartGauge: UIView {
-    
+        
     //MARK: Public Properties
+    public var gaugeType: SGType = .gauge {
+        didSet { updateUI() }
+    }
+    
     public var numberOfMajorTicks: Int = 5 {
         didSet { updateUI() }
     }
@@ -84,7 +93,11 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
 
-    public var gaugeLineWidth: CGFloat = 20.0 {
+    public var gaugeValueTrackWidth: CGFloat = 20.0 {
+        didSet { updateUI() }
+    }
+
+    public var gaugeTrackWidth: CGFloat = 20.0 {
         didSet { updateUI() }
     }
 
@@ -141,12 +154,19 @@ public class SmartGauge: UIView {
 
     //MARK: Private Functions
     private func updateUI() {
+        removeAllLayers()
+        
         setupBaseLayers()
         setupTrackLayer()
-        setupTickLayer()
-        setupTickValuesLayer()
+
+        if gaugeType == .gauge {
+            setupTickLayer()
+            setupTickValuesLayer()
+            setupHandleLayer()
+        } else {
+            trackLayer?.enableRangeColorIndicator = false
+        }
         setupSelectedValueTextLayer()
-        setupHandleLayer()
     }
     
     private func rangesUpdated() {
@@ -154,6 +174,16 @@ public class SmartGauge: UIView {
         // Create legends only if lenegds enabled
         guard enableLegends else { return }
         setupLegends()
+    }
+    
+    private func removeAllLayers() {
+        gaugeHolderLayer.removeFromSuperlayer()
+        legendsHolderLayer.removeFromSuperlayer()
+        trackLayer?.removeFromSuperlayer()
+        tickLayer?.removeFromSuperlayer()
+        tickValuesLayer?.removeFromSuperlayer()
+        selectedValueLayer?.removeFromSuperlayer()
+        handleLayer?.removeFromSuperlayer()
     }
     
     private func setupBaseLayers() {
@@ -218,7 +248,8 @@ public class SmartGauge: UIView {
         trackLayer?.gaugeAngle = gaugeAngle
         trackLayer?.gaugeValue = gaugeValue
         trackLayer?.gaugeMaxValue = gaugeMaxValue
-        trackLayer?.gaugeLineWidth = gaugeLineWidth
+        trackLayer?.gaugeTrackWidth = gaugeTrackWidth
+        trackLayer?.gaugeValueTrackWidth = gaugeValueTrackWidth
         trackLayer?.rangesList = rangesList
         trackLayer?.gaugeTrackColor = gaugeTrackColor
         trackLayer?.trackBackgroundColor = trackBackgroundColor
@@ -256,6 +287,7 @@ public class SmartGauge: UIView {
         selectedValueLayer?.removeFromSuperlayer()
         selectedValueLayer = SGGaugeValueLayer()
         selectedValueLayer?.frame = gaugeHolderLayer.bounds
+        selectedValueLayer?.gaugeType = gaugeType
         selectedValueLayer?.gaugeAngle = gaugeAngle
         selectedValueLayer?.gaugeValue = gaugeValue
         selectedValueLayer?.gaugeMaxValue = gaugeMaxValue
