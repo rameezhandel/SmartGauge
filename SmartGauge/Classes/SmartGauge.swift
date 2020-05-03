@@ -60,6 +60,14 @@ public class SmartGauge: UIView {
     public var legendSize: CGSize = CGSize(width: 25, height: 25) {
         didSet { updateUI() }
     }
+    
+    public var titleText: String = "" {
+        didSet { updateUI() }
+    }
+    
+    public var titleFontSize: CGFloat? {
+        didSet { updateUI() }
+    }
 
     public var tickColor: UIColor = UIColor.lightGray {
         didSet { updateUI() }
@@ -295,6 +303,8 @@ public class SmartGauge: UIView {
         selectedValueLayer?.decimalPlaces = decimalPlaces
         selectedValueLayer?.valueTextColor = valueTextColor
         selectedValueLayer?.valueFontSize = valueFontSize
+        selectedValueLayer?.titleText = titleText
+        selectedValueLayer?.titleFontSize = titleFontSize
         selectedValueLayer.map { gaugeHolderLayer.addSublayer($0) }
     }
 

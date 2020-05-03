@@ -29,12 +29,15 @@ class GoalViewController: UIViewController {
         gaugeView.enableLegends = true
         gaugeView.gaugeViewPercentage = 0.75
         gaugeView.legendSize = CGSize(width: 25, height: 20)
-        if let font = CTFontCreateUIFontForLanguage(.system, 30.0, nil) {
+        if let font = CTFontCreateUIFontForLanguage(.system, 20.0, nil) {
             gaugeView.legendFont = font
         }
+        gaugeView.titleFontSize = 15.0
+        gaugeView.titleText = "My Goal"
         gaugeView.gaugeTrackWidth = 20.0
         gaugeView.gaugeValueTrackWidth = 35.0
         //        gaugeView.legendSize = CGSize.zero
+        gaugeView.valueTextColor = .lightGray
         
         let first = SGRanges("Goal: 200", fromValue: 0, toValue: 200, color: GaugeRangeColorsSet.first)
         gaugeView.rangesList = [first]

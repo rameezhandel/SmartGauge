@@ -34,6 +34,7 @@ class GaugeViewController: UIViewController {
         if let font = CTFontCreateUIFontForLanguage(.system, 30.0, nil) {
             gaugeView.legendFont = font
         }
+        gaugeView.coveredTickValueColor = UIColor.darkGray
         
         let first = SGRanges("0 - 20", fromValue: 0, toValue: 20, color: GaugeRangeColorsSet.first)
         let second = SGRanges("20 - 40", fromValue: 20, toValue: 40, color: GaugeRangeColorsSet.second)
