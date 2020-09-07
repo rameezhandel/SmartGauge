@@ -49,8 +49,8 @@ class SGGaugeValueLayer: SGBaseLayer {
         
         let value = (gaugeValue ?? 0.0).rounded(2)
         var displayVal = "\(value)"
-        if floor(value) == value {
-            displayVal = "\(Int(value))"
+        if value != 0 {
+            displayVal = NSNumber(value: Float(value)).thousandSeperator(2) ?? "\(value)"
         }
 
         textLayer = CATextLayer()
@@ -118,6 +118,18 @@ extension String {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
         return size.height
+    }
+
+}
+
+extension NSNumber {
+    func thousandSeperator(_ places: Int) -> String? {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = ","
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = places
+        return formatter.string(for: self) ?? ""
     }
 
 }
