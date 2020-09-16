@@ -96,6 +96,10 @@ public class SmartGauge: UIView {
     public var valueFont: UIFont = UIFont.systemFont(ofSize: 20) {
         didSet { updateUI() }
     }
+    
+    public var tickValueFontSize: CGFloat? {
+        didSet { updateUI() }
+    }
 
     public var gaugeValue: CGFloat? {
         didSet { updateUI() }
@@ -288,6 +292,7 @@ public class SmartGauge: UIView {
         tickValuesLayer?.numberOfMajorTicks = numberOfMajorTicks
         tickValuesLayer?.coveredTickValueColor = coveredTickValueColor
         tickValuesLayer?.uncoveredTickValueColor = uncoveredTickValueColor
+        tickValuesLayer?.tickValueFontSize = tickValueFontSize
         tickValuesLayer.map { gaugeHolderLayer.addSublayer($0) }
     }
 

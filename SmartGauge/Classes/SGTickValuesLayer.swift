@@ -19,6 +19,10 @@ class SGTickValuesLayer: SGBaseLayer {
         didSet { updateUI() }
     }
 
+    var tickValueFontSize: CGFloat? {
+        didSet { updateUI() }
+    }
+
     private var rangesLayers: [CALayer]?
 
     //MARK: Functions
@@ -55,7 +59,7 @@ class SGTickValuesLayer: SGBaseLayer {
 
             let layer = CATextLayer()
             layer.font = CTFontCreateUIFontForLanguage(.system, radius/30.0, nil)
-            layer.fontSize = radius/10.0
+            layer.fontSize = tickValueFontSize ?? radius/10.0
             layer.contentsScale = contentsScale
             layer.foregroundColor = (gaugeValue ?? 0) >= CGFloat(floatValue) ? coveredTickValueColor.cgColor : uncoveredTickValueColor.cgColor
             layer.frame = bounds.insetBy(dx: +radius/3.5, dy: +radius/3.5)
