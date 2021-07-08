@@ -1,6 +1,6 @@
 {
   "name": "SmartGauge",
-  "version": "0.1.0",
+  "version": "0.6.3",
   "summary": "Gauge for iOS",
   "description": "SmartGauge: Customizable iOS Gauge.",
   "homepage": "https://github.com/rameezhandel/SmartGauge",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/rameezhandel/SmartGauge.git",
-    "tag": "0.1.0"
+    "tag": "0.6.3"
   },
   "platforms": {
     "ios": "8.0"

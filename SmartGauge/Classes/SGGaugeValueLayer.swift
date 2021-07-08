@@ -18,6 +18,10 @@ class SGGaugeValueLayer: SGBaseLayer {
     public var valueFontSize: CGFloat? {
         didSet { updateUI() }
     }
+    
+    public var valueFont: UIFont? {
+        didSet { updateUI() }
+    }
 
     public var titleFontSize: CGFloat? {
         didSet { updateUI() }
@@ -54,7 +58,12 @@ class SGGaugeValueLayer: SGBaseLayer {
         }
 
         textLayer = CATextLayer()
-        textLayer?.font = CTFontCreateUIFontForLanguage(.system, radius/30.0, nil)
+        if #available(iOS 8.2, *) {
+            textLayer?.font = valueFont ?? UIFont.systemFont(ofSize: 20, weight: .regular)
+        } else {
+            // Fallback on earlier versions
+            textLayer?.font = CTFontCreateUIFontForLanguage(.system, radius/30.0, nil)
+        }
         textLayer?.fontSize = valueFontSize ?? radius/3.0
         textLayer?.contentsScale = contentsScale
         textLayer?.foregroundColor = valueTextColor.cgColor

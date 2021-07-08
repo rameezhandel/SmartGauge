@@ -308,6 +308,7 @@ public class SmartGauge: UIView {
         selectedValueLayer?.decimalPlaces = decimalPlaces
         selectedValueLayer?.valueTextColor = valueTextColor
         selectedValueLayer?.valueFontSize = valueFontSize
+        selectedValueLayer?.valueFont = valueFont
         selectedValueLayer?.titleText = titleText
         selectedValueLayer?.titleFontSize = titleFontSize
         selectedValueLayer.map { gaugeHolderLayer.addSublayer($0) }

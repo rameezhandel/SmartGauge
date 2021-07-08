@@ -27,6 +27,7 @@ class GaugeViewController: UIViewController {
         
         gaugeView.gaugeAngle = 60
         gaugeView.gaugeValue = 30
+        gaugeView.valueFont = UIFont.systemFont(ofSize: 10, weight: .thin)
         gaugeView.gaugeTrackColor = UIColor.blue
         gaugeView.enableLegends = false
         gaugeView.gaugeViewPercentage = 0.75

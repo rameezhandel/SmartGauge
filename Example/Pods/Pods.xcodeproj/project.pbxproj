@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C29AD0885D6A1E3B63F834B84C2FD8F /* SGTickValuesLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38BF3977FC8DAA799D202A207BBD45D /* SGTickValuesLayer.swift */; };
+		0C29AD0885D6A1E3B63F834B84C2FD8F /* SGTickValuesLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F984DB06D20033975812056298F48B /* SGTickValuesLayer.swift */; };
 		2940170E4B5FEE19FFC64A01DFED87D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2F1E1DD662973A5316376D0467647A93 /* SGGaugeValueLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A928C148634CF7287687D3DCEA575309 /* SGGaugeValueLayer.swift */; };
-		339885AD8D1B45D0BD17D6F93E7E334D /* SmartGauge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C6AD3CE46F1B5E571CE5874B80DE2 /* SmartGauge-dummy.m */; };
+		2F1E1DD662973A5316376D0467647A93 /* SGGaugeValueLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E874629EE5851A33A97D8DECB5F89105 /* SGGaugeValueLayer.swift */; };
+		339885AD8D1B45D0BD17D6F93E7E334D /* SmartGauge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D61BC652B1F2516280476137F162B34 /* SmartGauge-dummy.m */; };
 		37F25F6CD49663577DF96FE5267F66F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		3BA0B9900F059FFE08E75A84DA1F7341 /* SmartGauge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D625BD872A35C37152538D2E26B6418 /* SmartGauge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E5A57AE2731709DFD475386A2CC272D /* SGTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2372EBE9BADCDF582E68208798A13817 /* SGTrackLayer.swift */; };
+		3BA0B9900F059FFE08E75A84DA1F7341 /* SmartGauge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E090DE99223FC2962DC34E72B074FEE2 /* SmartGauge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E5A57AE2731709DFD475386A2CC272D /* SGTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAAB22EC56949945AB7B0B9657AB98 /* SGTrackLayer.swift */; };
 		4F6088178218941AEC8984E7200B2F18 /* Pods-SmartGauge_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 309EC0EC0B28EA987A3B50B595F0D1D1 /* Pods-SmartGauge_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B84CB1295C3FB0FF649DCA4FD8A669F /* Pods-SmartGauge_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D1584AE719C1922EB2E3541B26D158 /* Pods-SmartGauge_Example-dummy.m */; };
-		68164A37790CC507A2C59A8D73989577 /* SGBaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C55AE62ECC04F66870F37399799E40 /* SGBaseLayer.swift */; };
+		68164A37790CC507A2C59A8D73989577 /* SGBaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2BBF6B0D3413C4357CA382A0FE2E55 /* SGBaseLayer.swift */; };
 		7A27E59E96C1C4C23F4B8940CA778895 /* Pods-SmartGauge_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC1B419A55DC5DC1C4A8BB46DAB090B /* Pods-SmartGauge_Tests-dummy.m */; };
-		926FBAC7CCF2CB2746E0193503F321B3 /* SGTickLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B63FF6CB8C9DAD3223043D1E1A5DA7 /* SGTickLayer.swift */; };
-		A4A6E5A6095946BDA5C4B5650A61D31A /* SmartGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E57EDBC68D45AB90A7CF3616BDFD6 /* SmartGauge.swift */; };
+		926FBAC7CCF2CB2746E0193503F321B3 /* SGTickLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45D781B8062F40A519854AA634AD52 /* SGTickLayer.swift */; };
+		A4A6E5A6095946BDA5C4B5650A61D31A /* SmartGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15620E78A23EE25477F9E769269418F8 /* SmartGauge.swift */; };
 		E3461A2523BA858C53C51FD389E15BFD /* Pods-SmartGauge_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73DC0851114DFA17FDA586894DBF59E8 /* Pods-SmartGauge_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F032FF1A39C00AE166B2036C39C431C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		FBBD9063ABC43CD9DCDCD57656831F18 /* SGHandleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB51D7880BBF5742869BA54837A9FEE /* SGHandleLayer.swift */; };
+		FBBD9063ABC43CD9DCDCD57656831F18 /* SGHandleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346032C3FB3B58DFE044AB7CD9D2EB3F /* SGHandleLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,43 +44,44 @@
 
 /* Begin PBXFileReference section */
 		0AC48F0CE1BE54D6948A88C3FD68E5B5 /* Pods-SmartGauge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartGauge_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0CEA3C0EDD080F1306E9CA8237B12849 /* SmartGauge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmartGauge-Info.plist"; sourceTree = "<group>"; };
+		15620E78A23EE25477F9E769269418F8 /* SmartGauge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartGauge.swift; path = SmartGauge/Classes/SmartGauge.swift; sourceTree = "<group>"; };
 		16C0A1CF11C7C66CCCC776A3F6AE8313 /* Pods-SmartGauge_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartGauge_Example.modulemap"; sourceTree = "<group>"; };
-		2372EBE9BADCDF582E68208798A13817 /* SGTrackLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGTrackLayer.swift; path = SmartGauge/Classes/SGTrackLayer.swift; sourceTree = "<group>"; };
-		2D625BD872A35C37152538D2E26B6418 /* SmartGauge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartGauge-umbrella.h"; sourceTree = "<group>"; };
+		1FA8DF16BF9084469A2E21113779C9A4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		24F116D728FAC66DF320D1299D02BFA4 /* SmartGauge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartGauge.modulemap; sourceTree = "<group>"; };
 		309EC0EC0B28EA987A3B50B595F0D1D1 /* Pods-SmartGauge_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartGauge_Example-umbrella.h"; sourceTree = "<group>"; };
-		30B63FF6CB8C9DAD3223043D1E1A5DA7 /* SGTickLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGTickLayer.swift; path = SmartGauge/Classes/SGTickLayer.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3A3C6AD3CE46F1B5E571CE5874B80DE2 /* SmartGauge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartGauge-dummy.m"; sourceTree = "<group>"; };
-		4A0E57EDBC68D45AB90A7CF3616BDFD6 /* SmartGauge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmartGauge.swift; path = SmartGauge/Classes/SmartGauge.swift; sourceTree = "<group>"; };
+		346032C3FB3B58DFE044AB7CD9D2EB3F /* SGHandleLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGHandleLayer.swift; path = SmartGauge/Classes/SGHandleLayer.swift; sourceTree = "<group>"; };
 		4BEB4E29A48DFDAFDEEA7B60963286D2 /* Pods_SmartGauge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartGauge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D1584AE719C1922EB2E3541B26D158 /* Pods-SmartGauge_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartGauge_Example-dummy.m"; sourceTree = "<group>"; };
 		54EFA90DF457F4983BFC7AD38C61A4B9 /* Pods-SmartGauge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartGauge_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5B1E8EE864C8D1D9269EDD5E09ECCF62 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5B445024B6C17A4D97E6F53FA03F7B5E /* SmartGauge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartGauge.release.xcconfig; sourceTree = "<group>"; };
+		625A8B9DC5949A56E1CF7853E6EB18B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6B2BBF6B0D3413C4357CA382A0FE2E55 /* SGBaseLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGBaseLayer.swift; path = SmartGauge/Classes/SGBaseLayer.swift; sourceTree = "<group>"; };
 		6D6897A37687988D95D5879E6D3F70C1 /* SmartGauge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartGauge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFC4CFD1689D329E25C0272F03B05FF /* Pods-SmartGauge_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartGauge_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		720ADF0E5FC53AD6AC033F2958C8DDA8 /* SmartGauge.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SmartGauge.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		73DC0851114DFA17FDA586894DBF59E8 /* Pods-SmartGauge_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmartGauge_Tests-umbrella.h"; sourceTree = "<group>"; };
-		7A25835ED10024BB1BBC36DE9D4CFB45 /* SmartGauge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartGauge-prefix.pch"; sourceTree = "<group>"; };
 		7ECB06187C665E4270409C67828E9F85 /* Pods-SmartGauge_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartGauge_Example-Info.plist"; sourceTree = "<group>"; };
 		8266C7097D3BA11663C4144CF1BA871E /* Pods-SmartGauge_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartGauge_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		86BC3DF4065D3F2F89F47E63CBD03CC4 /* Pods-SmartGauge_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmartGauge_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8DB51D7880BBF5742869BA54837A9FEE /* SGHandleLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGHandleLayer.swift; path = SmartGauge/Classes/SGHandleLayer.swift; sourceTree = "<group>"; };
-		94C22AD706AB4D17D552512F25726495 /* SmartGauge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmartGauge.modulemap; sourceTree = "<group>"; };
+		8D61BC652B1F2516280476137F162B34 /* SmartGauge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmartGauge-dummy.m"; sourceTree = "<group>"; };
 		94EF4913136D0318740D1F06FF3597AE /* Pods-SmartGauge_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartGauge_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E5EE1C89F7953E66597B1CA05A71D35 /* Pods-SmartGauge_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmartGauge_Tests.modulemap"; sourceTree = "<group>"; };
-		A5C55AE62ECC04F66870F37399799E40 /* SGBaseLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGBaseLayer.swift; path = SmartGauge/Classes/SGBaseLayer.swift; sourceTree = "<group>"; };
 		A787A62494E390800A7B126F530F9F36 /* Pods-SmartGauge_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmartGauge_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A928C148634CF7287687D3DCEA575309 /* SGGaugeValueLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGGaugeValueLayer.swift; path = SmartGauge/Classes/SGGaugeValueLayer.swift; sourceTree = "<group>"; };
 		AAC1B419A55DC5DC1C4A8BB46DAB090B /* Pods-SmartGauge_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmartGauge_Tests-dummy.m"; sourceTree = "<group>"; };
+		AE45D781B8062F40A519854AA634AD52 /* SGTickLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGTickLayer.swift; path = SmartGauge/Classes/SGTickLayer.swift; sourceTree = "<group>"; };
 		B4CD90C268FD1C4CE4BEDADE81A742F8 /* Pods-SmartGauge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartGauge_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C14AC604E8A6310DB3E7835564EB94FA /* Pods-SmartGauge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmartGauge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C38BF3977FC8DAA799D202A207BBD45D /* SGTickValuesLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGTickValuesLayer.swift; path = SmartGauge/Classes/SGTickValuesLayer.swift; sourceTree = "<group>"; };
+		C1F984DB06D20033975812056298F48B /* SGTickValuesLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGTickValuesLayer.swift; path = SmartGauge/Classes/SGTickValuesLayer.swift; sourceTree = "<group>"; };
 		D17FC1919D29A2AC7040664220EB7E8D /* Pods-SmartGauge_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmartGauge_Tests-Info.plist"; sourceTree = "<group>"; };
+		D3AAAB22EC56949945AB7B0B9657AB98 /* SGTrackLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGTrackLayer.swift; path = SmartGauge/Classes/SGTrackLayer.swift; sourceTree = "<group>"; };
+		E090DE99223FC2962DC34E72B074FEE2 /* SmartGauge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartGauge-umbrella.h"; sourceTree = "<group>"; };
 		E260A662813780B9BD6F29A12CA7FDFA /* Pods_SmartGauge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartGauge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA150918B26BA16B223AB6A39FD7DEEA /* SmartGauge.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SmartGauge.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		F755B615DB9B9A3295184CB257C1E12D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F7B87F9C0A3EB61DDD4F9E0C5D44E265 /* SmartGauge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartGauge.xcconfig; sourceTree = "<group>"; };
+		E3036C55F88001F42CFBEBE22D29BA3C /* SmartGauge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmartGauge.debug.xcconfig; sourceTree = "<group>"; };
+		E874629EE5851A33A97D8DECB5F89105 /* SGGaugeValueLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SGGaugeValueLayer.swift; path = SmartGauge/Classes/SGGaugeValueLayer.swift; sourceTree = "<group>"; };
+		EA5369C1C3BA793A542610B1771527D6 /* SmartGauge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmartGauge-prefix.pch"; sourceTree = "<group>"; };
+		F72B7BD43E22DB3CEAA16E6816F38DFD /* SmartGauge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmartGauge-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,21 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CA24E099549F3E27E7A908D7BB5EDB0 /* SmartGauge */ = {
+		1D4E7D61FFCE85EF74907B3A474DBA27 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				A5C55AE62ECC04F66870F37399799E40 /* SGBaseLayer.swift */,
-				A928C148634CF7287687D3DCEA575309 /* SGGaugeValueLayer.swift */,
-				8DB51D7880BBF5742869BA54837A9FEE /* SGHandleLayer.swift */,
-				30B63FF6CB8C9DAD3223043D1E1A5DA7 /* SGTickLayer.swift */,
-				C38BF3977FC8DAA799D202A207BBD45D /* SGTickValuesLayer.swift */,
-				2372EBE9BADCDF582E68208798A13817 /* SGTrackLayer.swift */,
-				4A0E57EDBC68D45AB90A7CF3616BDFD6 /* SmartGauge.swift */,
-				99A5C9C0C8C1AE91E573E99E5B26B028 /* Pod */,
-				CBA4510B6B8B59CC006334CCC538B445 /* Support Files */,
+				1FA8DF16BF9084469A2E21113779C9A4 /* LICENSE */,
+				625A8B9DC5949A56E1CF7853E6EB18B9 /* README.md */,
+				720ADF0E5FC53AD6AC033F2958C8DDA8 /* SmartGauge.podspec */,
 			);
-			name = SmartGauge;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		414D8315AFBB25AB86B2C80C854ED947 /* Pods-SmartGauge_Example */ = {
@@ -148,19 +142,9 @@
 		919C42F5BFA56845304ED394DC5875FA /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2CA24E099549F3E27E7A908D7BB5EDB0 /* SmartGauge */,
+				DC7970146DF55F99E1A5B8E536DF77C5 /* SmartGauge */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		99A5C9C0C8C1AE91E573E99E5B26B028 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				5B1E8EE864C8D1D9269EDD5E09ECCF62 /* LICENSE */,
-				F755B615DB9B9A3295184CB257C1E12D /* README.md */,
-				EA150918B26BA16B223AB6A39FD7DEEA /* SmartGauge.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		9EA7751942797B27DA7F5E5AD03DFCA6 /* Targets Support Files */ = {
@@ -180,6 +164,21 @@
 				6D6897A37687988D95D5879E6D3F70C1 /* SmartGauge.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AC0CACDDA6BDFF7FB623EA4DB9F888BF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				24F116D728FAC66DF320D1299D02BFA4 /* SmartGauge.modulemap */,
+				8D61BC652B1F2516280476137F162B34 /* SmartGauge-dummy.m */,
+				F72B7BD43E22DB3CEAA16E6816F38DFD /* SmartGauge-Info.plist */,
+				EA5369C1C3BA793A542610B1771527D6 /* SmartGauge-prefix.pch */,
+				E090DE99223FC2962DC34E72B074FEE2 /* SmartGauge-umbrella.h */,
+				E3036C55F88001F42CFBEBE22D29BA3C /* SmartGauge.debug.xcconfig */,
+				5B445024B6C17A4D97E6F53FA03F7B5E /* SmartGauge.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SmartGauge";
 			sourceTree = "<group>";
 		};
 		AC9C3A3C502C37EF2EDB0AB3CD9DAEAF /* Pods-SmartGauge_Tests */ = {
@@ -206,20 +205,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CBA4510B6B8B59CC006334CCC538B445 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				94C22AD706AB4D17D552512F25726495 /* SmartGauge.modulemap */,
-				F7B87F9C0A3EB61DDD4F9E0C5D44E265 /* SmartGauge.xcconfig */,
-				3A3C6AD3CE46F1B5E571CE5874B80DE2 /* SmartGauge-dummy.m */,
-				0CEA3C0EDD080F1306E9CA8237B12849 /* SmartGauge-Info.plist */,
-				7A25835ED10024BB1BBC36DE9D4CFB45 /* SmartGauge-prefix.pch */,
-				2D625BD872A35C37152538D2E26B6418 /* SmartGauge-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SmartGauge";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +222,23 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC7970146DF55F99E1A5B8E536DF77C5 /* SmartGauge */ = {
+			isa = PBXGroup;
+			children = (
+				6B2BBF6B0D3413C4357CA382A0FE2E55 /* SGBaseLayer.swift */,
+				E874629EE5851A33A97D8DECB5F89105 /* SGGaugeValueLayer.swift */,
+				346032C3FB3B58DFE044AB7CD9D2EB3F /* SGHandleLayer.swift */,
+				AE45D781B8062F40A519854AA634AD52 /* SGTickLayer.swift */,
+				C1F984DB06D20033975812056298F48B /* SGTickValuesLayer.swift */,
+				D3AAAB22EC56949945AB7B0B9657AB98 /* SGTrackLayer.swift */,
+				15620E78A23EE25477F9E769269418F8 /* SmartGauge.swift */,
+				1D4E7D61FFCE85EF74907B3A474DBA27 /* Pod */,
+				AC0CACDDA6BDFF7FB623EA4DB9F888BF /* Support Files */,
+			);
+			name = SmartGauge;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +342,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = A58798F31BC32C95584869DA696FF029 /* Products */;
@@ -491,9 +494,9 @@
 			};
 			name = Debug;
 		};
-		20DF097C3E24E1565FA41AD4A61F6AE7 /* Debug */ = {
+		1B7F4DB2B1D327CBE547D2BCA877A53D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7B87F9C0A3EB61DDD4F9E0C5D44E265 /* SmartGauge.xcconfig */;
+			baseConfigurationReference = 5B445024B6C17A4D97E6F53FA03F7B5E /* SmartGauge.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -517,10 +520,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		5E71643A21298F720D57D54D7B2BDEDB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -557,9 +561,9 @@
 			};
 			name = Release;
 		};
-		76D760D016318C88BCCC733849EFA97A /* Release */ = {
+		AC5981888635CC06815199E5EF755B1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7B87F9C0A3EB61DDD4F9E0C5D44E265 /* SmartGauge.xcconfig */;
+			baseConfigurationReference = E3036C55F88001F42CFBEBE22D29BA3C /* SmartGauge.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -583,11 +587,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -775,8 +778,8 @@
 		C9FAF1229786B70143E53F563EC83803 /* Build configuration list for PBXNativeTarget "SmartGauge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20DF097C3E24E1565FA41AD4A61F6AE7 /* Debug */,
-				76D760D016318C88BCCC733849EFA97A /* Release */,
+				AC5981888635CC06815199E5EF755B1C /* Debug */,
+				1B7F4DB2B1D327CBE547D2BCA877A53D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
