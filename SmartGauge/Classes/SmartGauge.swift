@@ -225,6 +225,7 @@ public class SmartGauge: UIView {
     }
     
     private func setupLegends() {
+        legendsHolderLayer.sublayers?.forEach({ $0.removeFromSuperlayer() })
         for (index, range) in rangesList.enumerated() {
             // TextLayer
             let legendTextLayer = CATextLayer()
