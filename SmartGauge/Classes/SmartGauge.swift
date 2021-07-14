@@ -61,6 +61,10 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
     
+    public var legendCornerRadius: CGFloat = 5.0 {
+        didSet { updateUI() }
+    }
+
     public var titleText: String = "" {
         didSet { updateUI() }
     }
@@ -247,7 +251,7 @@ public class SmartGauge: UIView {
             
             // Create legend
             let legend = CAShapeLayer()
-            legend.path = UIBezierPath(roundedRect: CGRect(x: legendMargin, y: legendYValue, width: legendSize.width, height: legendSize.height), cornerRadius: 5).cgPath
+            legend.path = UIBezierPath(roundedRect: CGRect(x: legendMargin, y: legendYValue, width: legendSize.width, height: legendSize.height), cornerRadius: legendCornerRadius).cgPath
             legend.fillColor = range.color?.cgColor ?? UIColor.gray.cgColor
             legendsHolderLayer.addSublayer(legend)
         }
