@@ -65,7 +65,7 @@ class SGGaugeValueLayer: SGBaseLayer {
             textLayer?.font = CTFontCreateUIFontForLanguage(.system, radius/30.0, nil)
         }
         textLayer?.fontSize = valueFontSize ?? radius/3.0
-        textLayer?.contentsScale = contentsScale
+        textLayer?.contentsScale = UIScreen.main.scale
         textLayer?.foregroundColor = valueTextColor.cgColor
         textLayer?.string = displayVal
 
@@ -91,7 +91,7 @@ class SGGaugeValueLayer: SGBaseLayer {
         titleLayer = CATextLayer()
         titleLayer?.font = CTFontCreateUIFontForLanguage(.system, radius/15.0, nil)
         titleLayer?.fontSize = titleFontSize ?? radius/3.0
-        titleLayer?.contentsScale = contentsScale
+        titleLayer?.contentsScale = UIScreen.main.scale
         titleLayer?.foregroundColor = valueTextColor.cgColor
         titleLayer?.string = titleText
 

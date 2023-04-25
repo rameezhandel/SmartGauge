@@ -231,7 +231,8 @@ public class SmartGauge: UIView {
             let legendTextLayer = CATextLayer()
             legendTextLayer.font = legendFont
             legendTextLayer.fontSize = CTFontGetSize(legendFont)
-            
+            legendTextLayer.contentsScale = UIScreen.main.scale
+
             legendTextLayer.string = range.title
             legendTextLayer.foregroundColor = valueTextColor.cgColor
             let textFrameSize = legendTextLayer.preferredFrameSize()
