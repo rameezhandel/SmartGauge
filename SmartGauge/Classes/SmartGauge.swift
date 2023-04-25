@@ -140,6 +140,10 @@ public class SmartGauge: UIView {
         }
     }
 
+    public var hideHandleLayer: Bool = false {
+        didSet { updateUI() }
+    }
+
     //MARK: Private Properties
     private var gaugeHolderLayer: CALayer   =   CALayer()
     private var legendsHolderLayer: CALayer =   CALayer()
@@ -178,7 +182,9 @@ public class SmartGauge: UIView {
         if gaugeType == .gauge {
             setupTickLayer()
             setupTickValuesLayer()
-            setupHandleLayer()
+            if !hideHandleLayer {
+                setupHandleLayer()
+            }
         } else {
             trackLayer?.enableRangeColorIndicator = false
         }
