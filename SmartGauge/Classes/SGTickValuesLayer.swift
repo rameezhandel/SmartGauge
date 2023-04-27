@@ -43,7 +43,7 @@ class SGTickValuesLayer: SGBaseLayer {
         rangesLayers = [CALayer]()
         
         guard numberOfMajorTicks > 0 else { return }
-        let maxRangeValue = gaugeMaxValue
+        let maxRangeValue = gaugeValue ?? 0.0 > gaugeMaxValue ? gaugeValue ?? 0.0 : gaugeMaxValue
         let devider = maxRangeValue / CGFloat(numberOfMajorTicks)
         guard devider > 0 else { return }
         let labelsCount = Int(maxRangeValue/devider)

@@ -42,8 +42,8 @@ class SGTickLayer: SGBaseLayer {
         let radius = min(bounds.midX, bounds.midY)
         
 
-//        let maxRangeValue = Int(gaugeMaxValue)
-        let divider = gaugeMaxValue / CGFloat(numberOfMajorTicks)
+        let trackMaxValue = gaugeValue ?? 0.0 > gaugeMaxValue ? gaugeValue ?? 0.0 : gaugeMaxValue
+        let divider = trackMaxValue / CGFloat(numberOfMajorTicks)
         var majorTickValuesArray: [Int] = []
 
         for tickNumber in 0...numberOfMajorTicks {
@@ -54,7 +54,7 @@ class SGTickLayer: SGBaseLayer {
         
         // Calculate minor ticks
         let totalNumberOfMinorTicks = (majorTickValuesArray.count - 1) * (numberOfMinorTicks + 1)
-        let minorDivider = gaugeMaxValue / CGFloat(totalNumberOfMinorTicks)
+        let minorDivider = trackMaxValue / CGFloat(totalNumberOfMinorTicks)
         var minorTickValuesArray: [CGFloat] = []
         
         for tickNumber in 0...totalNumberOfMinorTicks {

@@ -144,6 +144,10 @@ public class SmartGauge: UIView {
         didSet { updateUI() }
     }
 
+    public var percentageMode: Bool = false {
+        didSet { updateUI() }
+    }
+
     //MARK: Private Properties
     private var gaugeHolderLayer: CALayer   =   CALayer()
     private var legendsHolderLayer: CALayer =   CALayer()
@@ -323,6 +327,7 @@ public class SmartGauge: UIView {
         selectedValueLayer?.valueFont = valueFont
         selectedValueLayer?.titleText = titleText
         selectedValueLayer?.titleFontSize = titleFontSize
+        selectedValueLayer?.percentageMode = percentageMode
         selectedValueLayer.map { gaugeHolderLayer.addSublayer($0) }
     }
 

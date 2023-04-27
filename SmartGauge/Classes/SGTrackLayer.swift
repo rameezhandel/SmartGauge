@@ -64,7 +64,9 @@ class SGTrackLayer: SGBaseLayer {
                 break
             }
         }
-        drawTrackLayer(trackLayer, value: gaugeMaxValue, trackWidth: gaugeTrackWidth, strokeColor: trackBackgroundColor)
+        
+        let trackMaxValue = gaugeValue ?? 0.0 > gaugeMaxValue ? gaugeValue ?? 0.0 : gaugeMaxValue
+        drawTrackLayer(trackLayer, value: trackMaxValue, trackWidth: gaugeTrackWidth, strokeColor: trackBackgroundColor)
         addSublayer(trackLayer!)
 
         // Draw Track Value

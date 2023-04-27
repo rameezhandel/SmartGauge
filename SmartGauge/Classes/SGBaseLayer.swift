@@ -35,11 +35,16 @@ class SGBaseLayer: CALayer {
         didSet {  updateUI() }
     }
 
+    public var percentageMode: Bool = false {
+        didSet {  updateUI() }
+    }
+
     //MARK: Functions
     internal func updateUI() {}
 
     internal func angleForValue(_ value: CGFloat) -> CGFloat {
-        let laregstAngle = gaugeMaxValue
+        let trackMaxValue = gaugeValue ?? 0.0 > gaugeMaxValue ? gaugeValue ?? 0.0 : gaugeMaxValue
+        let laregstAngle = trackMaxValue
         let gaugeMeterOffset = gaugeAngle * 2.0
         
         let totalAngle = 360 - gaugeMeterOffset

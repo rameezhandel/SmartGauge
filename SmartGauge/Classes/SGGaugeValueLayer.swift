@@ -56,6 +56,11 @@ class SGGaugeValueLayer: SGBaseLayer {
         if value != 0 {
             displayVal = NSNumber(value: Float(value)).thousandSeperator(2) ?? "\(value)"
         }
+        
+        if percentageMode {
+            let percentValue = ((gaugeValue ?? 0.0) * 100) / gaugeMaxValue
+            displayVal = (NSNumber(value: Float(percentValue)).thousandSeperator(2) ?? "\(percentValue)") + "%"
+        }
 
         textLayer = CATextLayer()
         if #available(iOS 8.2, *) {
