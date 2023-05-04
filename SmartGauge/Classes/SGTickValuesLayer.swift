@@ -56,6 +56,11 @@ class SGTickValuesLayer: SGBaseLayer {
             if floor(floatValue) == floatValue {
                 displayValue = "\(Int(floatValue))"
             }
+            
+            if percentageMode {
+                let percentValue = (floatValue * 100) / gaugeMaxValue
+                displayValue = "\(Int(percentValue))"
+            }
 
             let layer = CATextLayer()
             layer.font = CTFontCreateUIFontForLanguage(.system, radius/30.0, nil)

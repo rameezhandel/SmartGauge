@@ -309,6 +309,7 @@ public class SmartGauge: UIView {
         tickValuesLayer?.coveredTickValueColor = coveredTickValueColor
         tickValuesLayer?.uncoveredTickValueColor = uncoveredTickValueColor
         tickValuesLayer?.tickValueFontSize = tickValueFontSize
+        tickValuesLayer?.percentageMode = percentageMode
         tickValuesLayer.map { gaugeHolderLayer.addSublayer($0) }
     }
 
